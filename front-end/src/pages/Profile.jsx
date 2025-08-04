@@ -1,7 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../components/profile/sidebar'
+import Sidebar from '../components/profile/Sidebar'
 import { useEffect } from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader/Loader'
