@@ -1,0 +1,6 @@
+{
+    "editor.suggest.showUsers": true,
+    "editor.suggest.showSnippets": true,
+    "javascript.suggest.enabled": true,
+    "typescript.suggest.enabled": true
+}
