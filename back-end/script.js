@@ -18,6 +18,9 @@ app.use("/api/v1", bookRouter)
 app.use("/api/v1/", favouriteRouter) 
 app.use("/api/v1/" , cartRouter)
 app.use("/api/v1/", orderRouter)
+app.use(cors({
+  origin: ["https://book-heaven-mern.netlify.app"]
+}));
 
 const port = process.env.PORT;
 
