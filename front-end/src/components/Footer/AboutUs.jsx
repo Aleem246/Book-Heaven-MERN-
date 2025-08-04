@@ -1,7 +1,10 @@
 import { Box, Heading, Text, Flex, Stack, Image } from '@chakra-ui/react';
+import { useEffect } from 'react';
 
 const AboutUs = () => {
-  
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
 
   return (
     <Box maxW="7xl" mx="auto" px={{ base: 4, md: 8 }} py={12}>
@@ -77,4 +80,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export {AboutUs};

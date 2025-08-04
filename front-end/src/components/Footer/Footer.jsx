@@ -1,7 +1,7 @@
 import { Box, Heading, Flex, Stack, Text, Link, Divider } from "@chakra-ui/react";
 import React from "react";
 import { FaBookOpen, FaHeart, FaRegEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
+import {Link as RouterLink} from "react-router-dom"
 const Footer = () => {
   return (
     <Box 
@@ -45,7 +45,7 @@ const Footer = () => {
             Quick Links
           </Heading>
           
-          <Link href="/aboutus" color="yellow.300" _hover={{ color: "yellow.500" }}>
+          <Link as ={RouterLink} to="/aboutus"  color="yellow.300" _hover={{ color: "yellow.500" }}>
             About Us
           </Link>
 

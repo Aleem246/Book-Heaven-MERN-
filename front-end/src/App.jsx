@@ -22,7 +22,8 @@ import AllOrders from "/src/components/profile/AllOrders"
 import AddBook from "/src/components/profile/AddBook"
 import EditBook from "/src/components/profile/EditBook"
 import { Box } from "@chakra-ui/react";
-import AboutUs from "/src/components/Footer/AboutUs";
+import {AboutUs} from "/src/components/Footer/AboutUs"
+
 
 const App = () =>{
     const dispatch = useDispatch();
