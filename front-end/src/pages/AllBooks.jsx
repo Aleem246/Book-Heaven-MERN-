@@ -1,9 +1,9 @@
 import { Box, SimpleGrid, Spinner } from '@chakra-ui/react'
 import React ,{ useState, useEffect } from 'react'
 
-import BookCard from '../components/BookCard/BookCard';
+import BookCard from '/src/components/BookCard/BookCard';
 import axios from 'axios';
-import Loader from '../components/Loader/Loader';
+import Loader from '/src/components/Loader/Loader';
 
 
 const AllBooks = () => {

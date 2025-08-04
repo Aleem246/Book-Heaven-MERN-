@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import BookCard from '../BookCard/BookCard.jsx'
+import BookCard from '/src/components/BookCard/BookCard'
 import { Box, Spinner, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import Loader from '../Loader/Loader.jsx';
+import Loader from '/src/components/Loader/Loader';
 const RecentlyAddedBooks = () => {
   const [data , setData] = useState();
   const [loading , setLoading] = useState(true);

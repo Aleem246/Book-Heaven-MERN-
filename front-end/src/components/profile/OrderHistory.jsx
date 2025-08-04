@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import Loader from '../Loader/Loader'
+import Loader from '/src/components/Loader/Loader'
 import { Box, Flex, SimpleGrid, Text , Link as ChakraLink} from '@chakra-ui/react'
 import {Link } from 'react-router-dom'
 const OrderHistory = () => {

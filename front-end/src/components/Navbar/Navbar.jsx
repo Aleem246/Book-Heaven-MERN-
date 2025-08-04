@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import {Link, NavLink} from "react-router-dom"
 import {useSelector} from "react-redux"
-import logo from "../../assets/image.png"
+
 import { FaBookJournalWhills } from "react-icons/fa6";
 import {CloseIcon, HamburgerIcon} from "@chakra-ui/icons"
 import {Flex , Spacer ,  Text, Link as ChakraLink, Box, Image, useBreakpointValue, 

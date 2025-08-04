@@ -2,8 +2,8 @@ import { Box, Center, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useEffect } from 'react';
-import BookCard from '../BookCard/BookCard';
-import Loader from '../Loader/Loader';
+import BookCard from '/src/components/BookCard/BookCard';
+import Loader from '/src/components/Loader/Loader';
 
 const Favourites = () => {
     const[data, setData] = useState();

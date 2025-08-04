@@ -3,7 +3,7 @@ import { Box, Flex, SimpleGrid, Link as ChakraLink, Text, Button, AlertDialogOve
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
-import Loader from '../Loader/Loader';
+import Loader from '/src/components/Loader/Loader';
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { CheckIcon, ChevronDownIcon } from '@chakra-ui/icons';
 

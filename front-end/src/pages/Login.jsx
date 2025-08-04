@@ -19,7 +19,7 @@ import { useState } from 'react';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { authActions } from '../store/auth.js';
+import { authActions } from '../store/auth';
 import { useEffect } from 'react';
 
 export default function LoginPage() {

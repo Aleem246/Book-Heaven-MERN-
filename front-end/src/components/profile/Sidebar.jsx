@@ -1,11 +1,11 @@
 import { Box, Flex, Image, Text, Link as ChakraLink, Stack, Button, Spacer} from '@chakra-ui/react'
 import React from 'react'
-import {authActions} from '../../store/auth'
+import {authActions} from '/src/store/auth'
 import {Link} from "react-router-dom"
 import {useNavigate} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
-import Loader from '../Loader/Loader'
-import { useEffect } from 'react'
+import Loader from '/src/components/Loader/Loader'
+
 
 const Sidebar = ({data}) => {
 

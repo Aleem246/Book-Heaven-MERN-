@@ -1,28 +1,28 @@
 import React from "react"
-import Home from "./pages/Home"
+import Home from "/src/pages/Home"
 // import jwt from "jsonwebtoken"
 import {jwtDecode} from 'jwt-decode';
-import Navbar from "./components/Navbar/Navbar"
-import Footer from "./components/Footer/Footer"
+import Navbar from "/src/components/Navbar/Navbar"
+import Footer from "/src/components/Footer/Footer"
 import { Routes , Route, useNavigate} from "react-router-dom"
-import AllBooks from "./pages/AllBooks"
-import Login from "./pages/Login"
-import Signup from "./pages/Signup"
-import Cart from "./pages/Cart"
-import Profile from "./pages/Profile"
-import SingleBook from "./components/SingleBook/SingleBook.jsx"
+import AllBooks from "/src/pages/AllBooks"
+import Login from "/src/pages/Login"
+import Signup from "/src/pages/Signup"
+import Cart from "/src/pages/Cart"
+import Profile from "/src/pages/Profile"
+import SingleBook from "/src/components/SingleBook/SingleBook"
 import { useDispatch, useSelector } from "react-redux"
-import { authActions } from "./store/auth.js"
+import { authActions } from "/src/store/auth"
 import { useEffect } from "react"
 
-import Favourites from "./components/profile/Favourites.jsx"
-import OrderHistory from "./components/profile/OrderHistory.jsx"
-import Settings from "./components/profile/Settings.jsx"
-import AllOrders from "./components/profile/AllOrders.jsx"
-import AddBook from "./components/profile/AddBook.jsx"
-import EditBook from "./components/profile/EditBook.jsx"
+import Favourites from "/src/components/profile/Favourites"
+import OrderHistory from "/src/components/profile/OrderHistory"
+import Settings from "/src/components/profile/Settings"
+import AllOrders from "/src/components/profile/AllOrders"
+import AddBook from "/src/components/profile/AddBook"
+import EditBook from "/src/components/profile/EditBook"
 import { Box } from "@chakra-ui/react";
-import AboutUs from "./components/Footer/AboutUs.jsx";
+import AboutUs from "/src/components/Footer/AboutUs";
 
 const App = () =>{
     const dispatch = useDispatch();

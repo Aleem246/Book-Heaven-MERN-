@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Box, Button, Flex, Heading, Stack, Text, Textarea, useToast } from '@chakra-ui/react';
 import React, { useState , useEffect } from 'react'
-import Loader from '../Loader/Loader';
+import Loader from '/src/components/Loader/Loader';
 const Settings = () => {
   const [value, setValue] = useState();
   

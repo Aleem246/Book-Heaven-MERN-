@@ -3,7 +3,7 @@ import { Box, Stack, Text,Link as ChakraLink,
 import {Link} from "react-router-dom"
 import React, { useEffect } from 'react'
 import axios from 'axios'
-import Loader from '../Loader/Loader'
+import Loader from '/src/components/Loader/Loader'
 
 const BookCard = ({data , favourite}) => {
 const headers = {

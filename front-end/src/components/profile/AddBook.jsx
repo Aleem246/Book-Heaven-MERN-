@@ -28,7 +28,7 @@ const AddBook = () => {
     
         const post = async ()=>{
             try{
-                const response = await axios.post("http://localhost:8081/api/v1/add-book",bookdata,{headers});
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/add-book`,bookdata,{headers});
                 Toast({
                     title: response.data.message,
                     status: 'success',

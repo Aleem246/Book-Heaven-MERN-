@@ -1,6 +1,6 @@
 import React from "react"
-import Hero from "../components/Home/Hero.jsx"
-import RecentlyAddedBooks from "../components/Home/RecentlyAddedBooks.jsx"
+import Hero from "/src/components/Home/Hero"
+import RecentlyAddedBooks from "/src/components/Home/RecentlyAddedBooks"
 import { Box } from "@chakra-ui/react";
 const Home = () =>{
     return (
