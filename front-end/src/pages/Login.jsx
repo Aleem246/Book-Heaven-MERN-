@@ -51,7 +51,7 @@ export default function LoginPage() {
     
     const submit = async () => {
       try {
-        const response = await axios.post("http://localhost:8081/api/v1/log-in", formData);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/log-in`, formData);
 
 
           // console.log(response.data);

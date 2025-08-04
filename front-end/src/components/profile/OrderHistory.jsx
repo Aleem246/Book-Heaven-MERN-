@@ -24,7 +24,7 @@ const OrderHistory = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
       const fetch = async()=>{
-        const response = await axios.get("http://localhost:8081/api/v1/get-order-history" , {headers});
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-order-history` , {headers});
         setOrder(response.data.data);
       }
       fetch();

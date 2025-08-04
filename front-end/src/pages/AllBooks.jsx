@@ -12,7 +12,7 @@ const AllBooks = () => {
     window.scrollTo(0, 0);
     const fetch = async()=>{
       try{
-        const response =await axios.get("http://localhost:8081/api/v1/get-all-books");
+        const response =await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-all-books`);
         setData(response.data.data);
 
       }catch(err){

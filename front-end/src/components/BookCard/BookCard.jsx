@@ -17,7 +17,7 @@ useEffect(()=>{
 const Toast = useToast();
   const handleRemove = () => {
       const fetch= async()=>{
-          const response = await axios.put(`http://localhost:8081/api/v1/remove-fav` , {}, {headers});
+          const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/remove-fav` , {}, {headers});
         console.log(response);
           Toast({
             title: response.data.message,

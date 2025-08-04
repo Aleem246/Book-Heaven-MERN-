@@ -16,7 +16,7 @@ const Settings = () => {
   const toast = useToast();
   const updateAddress = async(e)=>{
       e.preventDefault();
-    const response = await axios.put("http://localhost:8081/api/v1/update-address" , value , {headers});
+    const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/update-address` , value , {headers});
     toast({
       title: response.data.message,
       status: 'success',
@@ -29,7 +29,7 @@ const Settings = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
       const fetch = async()=>{
-          const response = await axios.get("http://localhost:8081/api/v1/get-user-info" , {headers});
+          const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-user-info` , {headers});
           
           setValue(response.data.data);
           

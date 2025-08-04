@@ -15,7 +15,7 @@ import {
   Link
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, Link as RouterLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -31,6 +31,7 @@ export default function SignupPage() {
 
   useEffect(()=>{
     window.scrollTo(0, 0);
+    
   },[])
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -48,8 +49,8 @@ export default function SignupPage() {
     
     const submit = async()=>{
       try {
-        const response = await axios.post('http://localhost:8081/api/v1/sign-up', formData);
-        // console.log(response.data.message);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/sign-up`, formData);
+        
         
         setTimeout(() => {
           toast({

@@ -24,7 +24,7 @@ const Cart = () => {
     
       const fetch = async()=>{
           try{
-            const response = await axios.get("http://localhost:8081/api/v1/get-user-cart",{headers});
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-user-cart`,{headers});
             // console.log(response.data.data)
             setCarts(response.data.data);
           }catch(err){
@@ -46,7 +46,7 @@ const Cart = () => {
 
   const handlePlaceOrder = async()=>{
       try{
-        const response = await axios.post(`http://localhost:8081/api/v1/place-order`,{order: carts}, {headers});
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/place-order`,{order: carts}, {headers});
         console.log(response.message);
         navigate("/profile/orderHistory")
       }catch(err){
@@ -56,7 +56,7 @@ const Cart = () => {
     const handleDelete = async(bookId)=>{
         const fetch = async()=>{
           try{
-            const response = await axios.put(`http://localhost:8081/api/v1/remove-from-cart/${bookId}` , {} , {headers});
+            const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/remove-from-cart/${bookId}` , {} , {headers});
             setCarts(response.data.data);
 
           }catch(err){

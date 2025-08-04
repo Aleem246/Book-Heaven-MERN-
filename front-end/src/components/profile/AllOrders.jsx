@@ -27,7 +27,7 @@ const AllOrders = () => {
   const handleStatusUpdate = async (orderId, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:8081/api/v1/update-status/${orderId}`,
+        `${import.meta.env.VITE_API_URL}/api/v1/update-status/${orderId}`,
         { status: newStatus },
         { headers }
       );
@@ -59,7 +59,7 @@ const AllOrders = () => {
     window.scrollTo(0, 0);
       const fetch = async()=>{
           try{
-            const response = await axios.get('http://localhost:8081/api/v1/get-all-orders', {headers});
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-all-orders`, {headers});
             setAllorder(response.data.data);
             // console.log(response.data.data);
           }catch(err){
@@ -70,7 +70,7 @@ const AllOrders = () => {
   },[])
   const handleGetUserDetails = async(userId)=>{
     try{
-      const response = await axios.get(`http://localhost:8081/api/v1/get-user-info/${userId}` , {headers});
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-user-info/${userId}` , {headers});
       setUserData(response.data.data);
       setViewDetails(true);
     }catch(err){

@@ -26,7 +26,7 @@ const EditBook = () => {
         window.scrollTo(0, 0);
             const getBookDetail = async()=>{
                 try{
-                    const response = await axios.get(`http://localhost:8081/api/v1/get-book/${bookId}`);
+                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-book/${bookId}`);
                     setBookdata(response.data.data);
 
                 }catch(err){
@@ -47,7 +47,7 @@ const EditBook = () => {
     
         const post = async ()=>{
             try{
-                const response = await axios.put("http://localhost:8081/api/v1/update-book",bookdata,{headers});
+                const response = await axios.put( `${import.meta.env.VITE_API_URL}/api/v1/update-book`,bookdata,{headers});
                 Toast({
                     title: response.data.message,
                     status: 'success',

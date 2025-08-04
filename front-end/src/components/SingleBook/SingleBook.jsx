@@ -28,7 +28,7 @@ import { useRef } from 'react'
             const fetch = async()=>{
                 try{
                    
-                    const response = await axios.get(`http://localhost:8081/api/v1/get-book/${bookId}`);
+                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-book/${bookId}`);
                     setData(response.data.data);
                 }catch(err){
                     console.log(err);
@@ -54,7 +54,7 @@ import { useRef } from 'react'
            
             try{
 
-              const response = await axios.put(`http://localhost:8081/api/v1/add-fav`, {}, {headers: headersforuser});
+              const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/add-fav`, {}, {headers: headersforuser});
               // (response.data.message) && alert(response.data.message);
               toast({
                 title: response.data.message,
@@ -75,7 +75,7 @@ import { useRef } from 'react'
            const fetch = async()=>{
             try{
 
-              const response = await axios.put(`http://localhost:8081/api/v1/add-to-cart`, {}, {headers : headersforuser});
+              const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/add-to-cart`, {}, {headers : headersforuser});
           
               toast({
                 title: response.data.message,
@@ -94,7 +94,7 @@ import { useRef } from 'react'
         
         const handleDelete = async()=>{
            try{
-              const response = await axios.delete('http://localhost:8081/api/v1/delete-book' ,  {headers, data : {bookId}});
+              const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/v1/delete-book` ,  {headers, data : {bookId}});
               // console.log(response);
               toast({
                 title: response.data.message,
